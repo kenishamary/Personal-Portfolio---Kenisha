@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs</title>
+    <style>
+    body, html {
+            margin: 0;
+            padding: 0;
+            /**font-family: 'Arial, sans-serif';**/
+            font-family: Tahoma;
+            font-style: normal;
+            font-weight: 100;
+            font-stretch: ultra-condensed;
+        }
+    .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        h1, h2 {
+            margin: 0;
+        }
+
+    /* Header Styles */
+        header {
+            /* background-color: #FAF5E9; */
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .header_link {
+          font-size: 18px;
+          list-style: none; /* Remove default list styles */
+          margin: 0;
+          padding: 0;
+          display: flex; /* Align items in a row */
+}
+
+.header_link li {
+    margin-left: 15px; /* Space between links */
+}
+
+.header_link a {
+    color: black; /* Black color for links */
+    text-decoration: none; /* Remove underline */
+}
+
+.header_link a:hover {
+    text-decoration: underline; /* Optional: underline on hover */
+}
+
+        header ul {
+            list-style: none;
+            display: flex;
+        }
+
+        header ul li {
+            margin: 0 15px;
+        }
+
+        .logo .header_link{
+            color: #000;
+            font-family: poppins;
+        }
+
+        header ul li a {
+            font-weight: 500;
+        }
+
+        header .btn{
+            padding: 8px 15px;
+            font-size: 16px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: #FFDCC9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 0;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .text-content {
+    margin-left: 20px; /* Space between image and text */
+    transition: transform 0.3s, text-shadow 0.3s; /* Smooth transition for transform and shadow */
+}
+
+.text-content:hover {
+    transform: translateZ(10px) rotateX(5deg) rotateY(5deg); /* Create a 3D effect */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+}
+
+.intro-text {
+    font-size: 1.5rem; /* Adjust text size as needed */
+    margin: 5px 0; /* Space between paragraphs */
+}
+
+
+        .btn {
+   /**         background-color: #E1743B;
+            color: #FFF;
+            border: 1px ;
+            padding: 10px 15px;
+            cursor: pointer; **/
+            background-color:peachpuff; 
+            color:black; /* White text color */
+            border: none; /* Remove default border */
+            padding: 10px 20px; /* Vertical and horizontal padding */
+            text-align: center; /* Center text */
+            text-decoration: none; /* Remove underline */
+            display: inline-block; /* Allow width and height */
+            font-size: 16px; /* Font size */
+            border-radius: 25px; /* Rounded corners */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+            transition: all 0.3s ease; /* Smooth transition for all properties */
+            cursor: pointer; /* Change cursor on hover */
+        }
+        .btn:hover {
+            background-color:darksalmon; /* Darker green on hover */
+            transform: translateY(-2px); /* Lift effect */
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+        /* Introduction Section */
+        .intro {
+            padding: 50px 0;
+        }
+
+        .intro-content{
+            margin-left: 5px;
+            display: flex;
+        }
+        .text-content {
+            max-width: 600px;
+        }
+
+        .intro-text {
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .container .headline{
+            text-align: center;
+            padding: 15px 0;
+            font-size: 45px;
+            font-family: Tahoma;
+            font-weight: 500;
+
+        }
+        /* Project Section */
+       .blog-cards {
+        /* width: 85%; */
+        display: flex;
+        flex-wrap: wrap;
+        /* justify-content: space-between; */
+        margin: 20px 0 20px 20px;
+        /* align-items: center; */
+      }
+      .blog-card {
+        /* display: flex; */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* margin: 0px 15px; */
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+        overflow: hidden;
+        transition: transform 0.4s ease;
+        /* height: 600px; */
+        width: calc(33.33% - 20px); /* Adjust width for three columns with spacing */
+      }
+      .blog-card:hover {
+        transform: translateY(-10px);
+      }
+      .blog-card img {
+        /* float: left; */
+        /* width: 600px; */
+        /* height: 400px; */
+        /* background-size: cover; */
+        width: 100%;
+        height: auto;
+        max-height: 400px;
+        object-fit: cover;
+      }
+      .blog-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+        text-align: center;
+      }
+      /*
+      .blog-content h1 {
+        font-size: 22px;
+        margin-bottom: 10px;
+      }
+      .blog-content p {
+        font-size: 16px;
+        color: #555;
+        margin-bottom: 5px 0;
+      }*/
+      .blog-content > h4,
+.blog-content > p {
+    margin: 5px 0; /* Space above and below */
+    flex: 1; /* Allow equal distribution of space */
+}
+
+.blog-content > p:first-child,
+.blog-content > p:last-child {
+    width: 100%; /* Ensure they take full width */
+}
+.blog-image {
+    width: 100%;
+}
+
+.blog-image img {
+    width: 100%; 
+    height: auto; 
+    max-height: 300px; 
+    object-fit: cover; 
+}
+      .blog-content a {
+        display: inline-block;
+        padding: 0;
+        color: black;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+      .blog-content a:hover {
+        text-decoration: underline;
+      }
+
+      .slider-buttons {
+    display: flex;
+    justify-content: center; /* Center buttons */
+    margin-top: 20px; /* Space above the buttons */
+}
+
+.slider-button {
+    display: none; /* Hide all buttons by default */
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #FF5F1F; /* Button color */
+    /* color: #FF5F1F; */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: opacity 0.3s ease; /* Smooth appearance */
+}
+
+.slider-button.active {
+    display: inline-block; /* Show the active button */
+    opacity: 1; /* Fully visible */
+}
+
+/* Footer Styles */
+footer {
+    background-color: peachpuff;
+
+    padding: 20px;
+}
+
+.footer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-left h4 {
+    margin: 0;
+    font-size: 50px;
+    font-weight: 100;
+    color: #FF5F1F;
+}
+
+.hire-me {
+            background-color:#FF5F1F; 
+            color:white; /* White text color *
+            border: none; /* Remove default border */
+            padding: 10px 20px; /* Vertical and horizontal padding */
+            text-align: center; /* Center text */
+            text-decoration: none; /* Remove underline */
+            display: inline-block; /* Allow width and height */
+            font-size: 16px; /* Font size */
+            border-radius: 25px; /* Rounded corners */
+            /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); Shadow effect */
+            transition: all 0.3s ease; /* Smooth transition for all properties */
+            cursor: pointer; /* Change cursor on hover */
+}
+
+.footer-underline {
+    border: none;
+    border-top: 2px solid #000;
+    margin: 10px 0;
+    list-style: none; /* Remove default list styles */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.social-icons a img {
+    width: 30px;
+    margin-right: 10px;
+    margin-top: 50px;
+    /* filter: brightness(0) saturate(100%) invert(53%) sepia(60%) saturate(650%) hue-rotate(0deg) brightness(90%) contrast(90%); */
+    filter: brightness(0) saturate(100%) invert(40%) sepia(100%) saturate(600%) hue-rotate(0deg) brightness(90%) contrast(95%);
+}
+.navigation, .contact, .latest-info {
+    margin-left: 20px;
+    color: #FF5F1F;
+}
+
+.navigation ul, .contact ul {
+    list-style-type: none;
+    padding: 0;
+}
+.navigation h4{
+    color: #FF5F1F;
+}
+.contact h4{
+    color: #FF5F1F;
+}
+
+.navigation a {
+    color: black; /* Set the link color to black */
+    text-decoration: none; /* Remove underline */
+}
+
+.navigation a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+.contact a {
+    color: black; /* Set the link color to black */
+    text-decoration: none; /* Remove underline */
+}
+
+.contact a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+
+.navigation li, .contact li {
+    margin: 5px 0;
+}
+
+.latest-info form {
+    display: flex;
+    align-items: center;
+}
+
+.latest-info input {
+    padding: 5px;
+    margin-right: 5px;
+}
+
+.latest-info button {
+    padding: 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.input-container {
+    display: flex; /* Aligns items in a row */
+    /* align-items: center; Centers the items vertically */
+}
+
+.input-container input {
+    /* border: 2px solid #FF5F1F; Border color */
+    border: none;
+    border-radius: 25px 0 0 25px; /* Rounded corners */
+    padding: 10px 15px; /* Padding inside the input */
+    flex: 1; /* Makes the input take remaining space */
+    box-sizing: border-box;
+    outline: none;
+}
+
+.input-container button {
+    background-color: #FF5F1F; /* Button background color */
+    /* border: 2px solid #FF5F1F; Remove border */
+    border: none;
+    border-radius: 0 25px 25px 0; /* Rounded corners */
+    color: white; /* Button text color */
+    padding: 10px 15px; /* Padding inside the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    height: 100%;
+    margin-left: -1px;
+}
+
+    </style>
+    <script>
+        const blogCards = document.querySelectorAll('.blog-card');
+const sliderButtons = document.querySelectorAll('.slider-button');
+
+blogCards.forEach((card, index) => {
+    card.addEventListener('mouseenter', () => {
+        sliderButtons.forEach(button => button.classList.remove('active')); // Hide all buttons
+        sliderButtons[index].classList.add('active'); // Show the corresponding button
+    });
+
+    card.addEventListener('mouseleave', () => {
+        sliderButtons[index].classList.remove('active'); // Hide the button when not hovering
+    });
+});
+    </script>
+</head>
+<body>
+    <!--Header Section-->
+    <header>
+        <div class="logo">KENISHA MARY</div>
+        <nav>
+            <ul class="header_link" style="text-decoration: none;">
+                <li><a href="#">Home</a></li>
+                <li><a href="#about-section">About me</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Blogs</a></li>
+            </ul>
+        </nav>
+        <button class="btn view-resume">View Resume</button>
+    </header>
+
+    <section>
+        <div class="container">
+            <div class="headline">
+                <p id="headline-text">The Blog</p>
+            </div>
+        </div>
+    </section>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-image">
+                        <img src="Pictures\content-writer 1.png" alt="Kenisha Mary" />
+                    </div>
+                    <div class="text-content">
+                        <p class="intro-text">Welcome to my blog-a space</p>
+                        <p class="intro-text"> where thoughts turn into stories</p>
+                        <p class="intro-text"> worth sharing, creativity flows,</p>
+                        <p class="intro-text">design ideas brew!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Projects Section -->
+    <div class="blog-section">
+        <div class="blog-cards">
+          <div class="blog-card" style="margin-left: 8px;">
+            <div class="blog-image">
+              <img src="Pictures\Keni frnds.jpg" alt="WoodWick Candle Website Solution">
+            </div>
+            <div class="blog-content">
+              <h4>Campus Chronicles 2024</h4>
+              <p>Kenisha Mary</p>
+              <p>
+                where every corner of college life comes alive! From creative
+                projects to campus shenanigans, we're capturing the highs, lows
+                and everything in between!
+              </p>
+              <a href="default.asp">View Blog</a>
+            </div>
+          </div>
+          <div class="blog-card" style="margin-left: 8px;">
+            <div class="blog-image">
+              <img src="Pictures\Keni blur img.jpg" alt="Garson Project">
+            </div>
+            <div class="blog-content">
+              <h4>Design Freshers Frenzy at PES University</h4>
+              <p>Kenisha Mary</p>
+              <p>
+                Step into our Freshers Frenzy! A night filled with new faces,
+                laughter, awkward dance moves, and unforgettable moments as we
+                kicked off our college!
+              </p>
+              <a href="">View Blog</a>
+            </div>
+          </div>
+          <div class="blog-card" style="margin-left: 8px;">
+            <div class="blog-image">
+              <img src="Pictures\Keni wallpainting.jpg" alt="Garson Project">
+            </div>
+            <div class="blog-content">
+              <h4>Campus Chronicles 2024</h4>
+              <p>Kenisha Mary</p>
+              <p>
+                art meets raw creativity! Where this canvas comes alive-
+                expressing emotions!
+              </p>
+              <a href="">View Blog</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slider-buttons">
+        <button class="slider-button" data-index="1">Button 1</button>
+        <button class="slider-button" data-index="2">Button 2</button>
+        <button class="slider-button" data-index="3">Button 3</button>
+    </div>
+
+    <footer>
+        <div class="footer-header">
+            <div class="footer-left">
+                <h4>Let's connect there</h4>
+            </div>
+            <div class="footer-right">
+                <button class="hire-me">Hire Me ➔</button>
+            </div>
+        </div>
+        <hr class="footer-underline">
+        <div class="footer-content">
+            <div class="social-icons">
+                <a href="#"><img src="https://img.icons8.com/ios-filled/50/000000/facebook-new.png" alt="Facebook"></a>
+                <a href="#"><img src="https://img.icons8.com/ios-filled/50/000000/youtube.png" alt="YouTube"></a>
+                <a href="#"><img src="https://img.icons8.com/ios-filled/50/000000/whatsapp.png" alt="WhatsApp"></a>
+                <a href="#"><img src="https://img.icons8.com/ios-filled/50/000000/instagram-new.png" alt="Instagram"></a>
+                <a href="#"><img src="https://img.icons8.com/ios-filled/50/000000/twitter.png" alt="Twitter"></a>
+            </div>
+            <div class="navigation">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Me</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Blogs</a></li>
+                    <li><a href="#">Resume</a></li>
+                </ul>
+            </div>
+            <div class="contact">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="#">+20 11 43 63 73 41</a></li>
+                    <li><a href="#">fawzisayed1209@gmail.com</a></li>
+                    <li><a href="#">fawziuiux.com</a></li>
+                </ul>
+            </div>
+            <div class="latest-info">
+                <h4>Get the latest information</h4>
+                <form>
+                    <div class="input-container">
+                    <input type="text" placeholder="Email address">
+                    <button type="submit">➔</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

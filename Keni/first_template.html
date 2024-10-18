@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     /* Global Styles */
+    body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins';
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .container_2 {
+            width: 100%;
+            margin: 0 auto;
+            display: flex; /* Use Flexbox to align children side by side */
+            align-items: center; /* Vertically center the items */
+        }
+
+        h1, h2 {
+            margin: 0;
+        }
+        .btn {
+            background-color:peachpuff; 
+            color:black; /* White text color */
+            border: none; /* Remove default border */
+            padding: 10px 20px; /* Vertical and horizontal padding */
+            text-align: center; /* Center text */
+            text-decoration: none; /* Remove underline */
+            display: inline-block; /* Allow width and height */
+            font-size: 16px; /* Font size */
+            border-radius: 25px; /* Rounded corners */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+            transition: all 0.3s ease; /* Smooth transition for all properties */
+            cursor: pointer; /* Change cursor on hover */
+        }
+
+        .btn:hover {
+    background-color:darksalmon; /* Darker green on hover */
+    transform: translateY(-2px); /* Lift effect */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+        .logo{
+            padding: 15px 20px 75px;
+        }
+        header {
+            background-color: #FAF5E9;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+            font: 'poppins';
+        }
+        .header_link {
+          font-size: 18px;
+          list-style: none; /* Remove default list styles */
+          margin: 0;
+          padding: 0;
+          display: flex; /* Align items in a row */
+}
+
+.header_link li {
+    margin-left: 20px; /* Space between links */
+}
+
+.header_link a {
+    color: black; /* Black color for links */
+    text-decoration: none; /* Remove underline */
+}
+
+.header_link a:hover {
+    text-decoration: underline; /* Optional: underline on hover */
+}
+
+.intro-content {
+    display: flex; /* Use Flexbox to align children side by side */
+    align-items: flex-start; /* Align items at the top */
+    gap: 20px; /* Space between the two containers */
+}
+
+.intro-card {
+    display: flex; /* Use Flexbox to manage alignment */
+    flex-direction: column; /* Arrange items in a column */
+    align-items: flex-start; /* Align items to the start (left) */
+    flex: 1; /* Allow the text card to take up available space */
+    padding: 20px; /* Optional: add padding */
+    border: 2px solid black;
+}
+
+.intro-card-pic img {
+    max-width: 100%; /* Ensure the image is responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: rounded corners for the image */
+}
+.intro {
+            padding: 50px 0;
+            max-width: 100%;
+        }
+                /* Hero Section */
+                .hero {
+            background-color: #FFDCC9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 0;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+         <!-- Header Section -->
+         <header>
+            <div class="logo" style="font-size: 14px;">KENISHA MARY</div>
+            <nav>
+                <ul class="header_link" style="text-decoration: none;">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about-section">About me</a></li> <!-- Link to "Hi, I'm Kenisha" Section -->
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Blogs</a></li>
+                </ul>
+            </nav>
+            <button class="btn view-resume">View Resume</button>
+        </header>
+            <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="text-content">
+                    <p class="intro-text">Designing delightful experiences—because life’s too short for boring interfaces!</p>
+                    <button class="btn view-resume">View Resume</button>
+                </div>
+                <div class="hero-image">
+                    <img src="G:\Pictures\sample.jpg" alt="Kenisha Mary" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Introduction Section -->
+        <section class="intro">
+            <div class="container">
+                <section id="about-section" class="intro">
+                    <div class="container">
+                <h2 style="font-size: 80px; color: black; font-family: 'Poppins';">Hi, I’m 
+                    <span class="highlight" style="color: #E1743B;">Kenisha Mary</span>
+                </h2>
+                <p class="sub-text" style="font-size: 21px;">a UI UX Designer crafting user experiences that matter, so y’all get a sense of ‘who I am’ right away!</p>
+                <div class="intro-content">
+                <div class="intro-card">
+                    <p>Hey there! I’m a designer who believes less is more—except when it comes to laughter. I’m all about creating clean, simple designs that speak louder than words.</p>
+                    <p>With a cup of coffee in one hand and a sketchbook in the other, I turn wild ideas into delightful digital experiences.</p>
+                    <p>People say I’m easy to talk to, a good listener, and a fan of bad puns. When I’m not pixel-pushing, you’ll find me hunting for inspiration or finding new ways to make life just a bit more playful.</p>
+                </div>
+                <div class="intro-card-pic">
+                    <img src="G:\Pictures\graphic-designer 1.png" alt="Description" />
+                </div>
+            </div>
+            </div>
+        </section>
+            <!-- Projects Section -->
+    <section class="projects">
+            <div >
+                <div>
+                    <h2>Let's have a look at my <span class="highlight">Projects!</span></h2>
+                </div>
+                <div>
+                    <button class="btn see-all">See All</button>
+                </div>
+            </div>
+            <div class="project-showcase">
+                <div class="project-card">
+                    <img src="c:\Users\Kenisha\Pictures\Screenshots\ss.png" alt="WoodWick Candle Website Solution">
+                    <p>WoodWick - Candle Website Solution</p>
+                </div>
+                <div class="project-card">
+                    <img src="c:\Users\Kenisha\Pictures\Screenshots\Screenshot 2024-10-06 023351.png" alt="Garson Project">
+                    <p>Garson - Food Park App Solution</p>
+                </div>
+            </div>
+            <div class="categories">
+                <button class="btn category">Landing Page</button>
+                <button class="btn category">Product Design</button>
+                <button class="btn category">UI UX Design</button>
+                <button class="btn category">Graphic Design</button>
+                <button class="btn category">Cards</button>
+            </div>
+    </section>
+</body>
+</html>
